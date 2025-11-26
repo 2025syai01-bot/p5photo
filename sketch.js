@@ -36,7 +36,7 @@ function setup() {
 
 function draw() {
   image(video, 0, 0, width, height);
-  
+    
   if (faces.length > 0 && faces[0].lips) {
     image(
       img, 
@@ -55,6 +55,17 @@ function draw() {
   }
 
   image(bgimg, 0, 0, width, height);
+  
+  textSize(30);
+  fill('purple');
+   let today = new Date();
+  let year = today.getFullYear();
+  let month = today.getMonth() + 1;
+  let day = today.getDate();
+  
+  let dateString = year + "." + nf(month, 2) + "." + nf(day, 2);
+
+  text(dateString +'. 영종AI융합센터❤️',200,40);
 }
 
 function gotFaces(results) {
