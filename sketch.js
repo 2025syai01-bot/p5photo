@@ -8,7 +8,7 @@ let options = { maxFaces: 1, refineLandmarks: false, flipHorizontal: false };
 let captureButton;
 let sendButton;
 let emailInput;
-let capturedImage; // 저장된 이미지
+let capturedImage; // 저장된 이미지 
 
 function preload() {
   faceMesh = ml5.faceMesh(options, {flipped:true});
